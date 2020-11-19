@@ -17,13 +17,13 @@ gd_opt = gd_optimizer(obj, obj_grad, alpha=9E-1, max_iter=50)
 nm_opt = nm_optimizer(obj, max_iter=50)
 
 
-N = 100
+N = 4
 xinit = 5*np.ones([N, 1])
 
 
 # find optimal x from an initial guess using SUSD
 Nagents = N
-x0 = 0.01*np.random.rand(N,Nagents) + xinit
+x0 = 0.1*np.random.rand(N,Nagents) + xinit
 
 # search
 susd_it, susd_hist = susd_opt.search(x0, term_len=500)
