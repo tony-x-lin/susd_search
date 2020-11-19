@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # create SUSD optimizer with objective function
-susd_opt = susd_optimizer(obj, alpha=1E-2, max_iter=50)
+susd_opt = susd_optimizer(obj, alpha=8E-1, max_iter=50)
 
 # create GD optimizer with objective function and gradient function
 gd_opt = gd_optimizer(obj, obj_grad, alpha=9E-1, max_iter=50)

@@ -14,7 +14,7 @@ class susd_optimizer:
         fx = fx_ + self.sig*np.random.randn(x.shape[1])
 
         # perform the function transformation
-        idmin, fmin = np.argmin(fx), min(fx); print x
+        idmin, fmin = np.argmin(fx), min(fx)
         fx = 1-np.exp(-self.k*(fx-fmin))
 
         # check if the same index is still the minimum        
